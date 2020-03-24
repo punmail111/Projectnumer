@@ -47,19 +47,20 @@ const columns = [
 
 class Composite_Trapezoda extends Component{
 
-  /*data(){
-    axios.get('http://localhost:4000/Composite_Trapezoda').then(res => {
+  data(){
+    axios.get('http://192.168.99.101:8080/exact').then(res => {
       this.setState({
         fx: res.data[0].fx,
-        xl: res.data[0].xl,
-        xr: res.data[0].xr,
+        x0: res.data[0].x0,
+        xn: res.data[0].xn,
+        n : res.data[0].n,
         showInput: false,
       });
       this.forceUpdate();
-      this.Composite_Trapezoda(Number(this.state.xl),Number(this.state.xr));
+      this.Composite_Simphon_Rule(Number(this.state.x0),Number(this.state.xn),Number(this.state.n));
 
     });
-  }*/
+  }
 
 
   constructor(){
@@ -75,7 +76,7 @@ class Composite_Trapezoda extends Component{
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    //this.data = this.data.bind(this);
+    this.data = this.data.bind(this);
 
   }
 
@@ -95,7 +96,7 @@ class Composite_Trapezoda extends Component{
     })
   }
 
-  Composite_Trapezoda(x0,x1,n){
+  Composite_Simphon_Rule(x0,x1,n){
     var fx0,fx1,h,error,x,fxall1=0,fxall2=0;
     h = (x1-x0)/(2*n);
     fx0=this.func(x0);

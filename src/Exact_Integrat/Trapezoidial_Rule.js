@@ -42,19 +42,19 @@ const columns = [
 
 class Trapezoidial_Rule extends Component{
 
-  /*data(){
-    axios.get('http://localhost:4000/Trapezoidial_Rule').then(res => {
+  data(){
+    axios.get('http://192.168.99.101:8080/exact').then(res => {
       this.setState({
         fx: res.data[0].fx,
-        xl: res.data[0].xl,
-        xr: res.data[0].xr,
+        x0: res.data[0].x0,
+        x1: res.data[0].x1,
         showInput: false,
       });
       this.forceUpdate();
-      this.Trapezoidial_Rule(Number(this.state.xl),Number(this.state.xr));
+      this.Trapezoidial_Rule(Number(this.state.x0),Number(this.state.x1));
 
     });
-  }*/
+  }
 
 
   constructor(){
@@ -69,7 +69,7 @@ class Trapezoidial_Rule extends Component{
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    //this.data = this.data.bind(this);
+    this.data = this.data.bind(this);
 
   }
 

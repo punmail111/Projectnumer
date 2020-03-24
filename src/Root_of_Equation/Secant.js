@@ -41,7 +41,7 @@ const columns = [
 class Secant extends Component{
 
   data(){
-    axios.get('http://localhost:4000/secant').then(res => {
+    axios.get('http://192.168.99.101:8080/secant').then(res => {
       this.setState({
         fx: res.data[0].fx,
         x0: res.data[0].x0,

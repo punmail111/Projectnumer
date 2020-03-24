@@ -40,7 +40,7 @@ const columns = [
 
 class False_Position extends Component{
   data(){
-    axios.get('http://localhost:4000/falseposition').then(res => {
+    axios.get('http://192.168.99.101:8080/falseposition').then(res => {
       this.setState({
         fx: res.data[0].fx,
         xl: res.data[0].xl,

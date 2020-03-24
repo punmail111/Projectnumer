@@ -6,7 +6,8 @@ app.use(cors());
 const mongoose = require('mongoose')
 app.use(express.json())
 
-mongoose.connect('mongodb://localhost:27017/newmer');
+//mongoose.connect('mongodb://localhost:27017/newmer');
+mongoose.connect('mongodb+srv://punmail111:1234@cluster0-iszlb.azure.mongodb.net/Numer');
 var Schema = mongoose.Schema;
 
 var mySchemaxlxr = mongoose.Schema({
@@ -14,6 +15,15 @@ var mySchemaxlxr = mongoose.Schema({
     fx : String,
     xl : Number,
     xr : Number,
+});
+
+var mySchemaexact = mongoose.Schema({
+    key : String,
+    fx : String,
+    x0 : Number,
+    x1 : Number,
+    x2 : Number,
+    n : Number,
 });
 
 var mySchemax0 = mongoose.Schema({
@@ -29,13 +39,16 @@ var mySchemax0x1 = mongoose.Schema({
     x1 : Number,
 });
 
-var myModelxlxr = mongoose.model('myModelxlxr', mySchemaxlxr, 'Testting');
+var myModelxlxr = mongoose.model('myModelxlxr', mySchemaxlxr, 'testting');
 console.log('connect')
 
-var myModelx0 = mongoose.model('myModelx0', mySchemax0, 'Testting');
+var myModelexact = mongoose.model('myModelexact', mySchemaexact, 'testting');
 console.log('connect')
 
-var myModelx0x1 = mongoose.model('myModelx0x1', mySchemax0x1, 'Testting');
+var myModelx0 = mongoose.model('myModelx0', mySchemax0, 'testting');
+console.log('connect')
+
+var myModelx0x1 = mongoose.model('myModelx0x1', mySchemax0x1, 'testting');
 console.log('connect')
 
 
@@ -73,54 +86,15 @@ app.get('/secant', function(req, res, next){
         res.json(docs)
     })
 });
-/*
-//GET Method ดึงข้อมูลมาทั้งหมด
-app.get('/getUsers', function(req, res){
-    fs.readFile(__dirname + "/" + "user.json", 'utf8', function(err, data){
-        console.log(data); //data คือ ก้อนข้อมูลของ user ทุกคน
-        res.end(data);
-    });
+
+app.get('/exact', function(req, res, next){
+    myModelxlxr.find({key: 'Exact'}, function(err, docs){
+        console.log(docs)
+        res.json(docs)
+    })
 });
 
-//GET Method แบบมีเงื่อนไข id
-app.get('/getUsers/:id', function(req,res){
-    fs.readFile(__dirname + "/" + "user.json",'utf8', function(err, data){
-        var users = JSON.parse(data); //แปลงข้อมูลให้เป็นก้อน
-        var user = users["user" + req.params.id] //เพิ่มเงื่อนไข
-        console.log(user);
-        res.end(JSON.stringify(user));
-    });
-});
-
-/*var user = {
-    "user4" : {
-        "name" : "kongruksiam",
-        "password" : "5555",
-        "progession" : "programer",
-        "id" : 4
-    }
-}*/
-/*
-//ลบข้อมูล
-app.delete('/delUser/:index', function(req,res){
-    fs.readFile(__dirname + "/" + "user.json", 'utf8', function(err,data){
-        data = JSON.parse(data);
-        delete data["user" + req.params.index];
-        console.log(data);
-        res.end(JSON.stringify(data));
-    });
-});
-
-app.post('/addUser', function(req,res){
-    fs.readFile(__dirname + "/" + "user.json", 'utf8', function(err,data){
-        data = JSON.parse(data);
-        data["user4"] = user["user4"]; //เพิ่มข้อมูลใหม่มาจากตัวแปร user
-        console.log(data);
-        res.end(JSON.stringify(data));
-    });
-});
-*/
-var server = app.listen(4000,function(){
+    var server = app.listen(8080,function(){
     var host = server.address().address
     var port = server.address().port
     console.log("Application Run At http://%s:%s",host, port)

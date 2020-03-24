@@ -43,7 +43,7 @@ const columns = [
 class Bisection extends Component{
 
   data(){
-    axios.get('http://localhost:4000/bisection').then(res => {
+    axios.get('http://192.168.99.101:8080/bisection').then(res => {
       this.setState({
         fx: res.data[0].fx,
         xl: res.data[0].xl,
