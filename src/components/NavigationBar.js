@@ -23,6 +23,7 @@ export const NavigationBar = () => (
         <Nav className="ml-auto">
           <Nav.Item><Nav.Link><Link to="/">Home</Link></Nav.Link></Nav.Item>
           <Nav.Item><Nav.Link><Link to="/Root_of_Equation/Bisection">Root of Equation </Link></Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link><Link to="/Iterpalation/Newton">Iterpalation</Link></Nav.Link></Nav.Item>
           <Nav.Item><Nav.Link><Link to="/Exact_Integrat/Trapezoidial_Rule">Exact Integrat</Link></Nav.Link></Nav.Item>
 
         </Nav>

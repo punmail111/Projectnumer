@@ -11,6 +11,7 @@ import Trapezoidial_Rule from './Exact_Integrat/Trapezoidial_Rule';
 import Composite_Trapezoda from './Exact_Integrat/Composite_Trapezoda';
 import Simphon from './Exact_Integrat/Simphon';
 import Composite_Simphon_Rule from './Exact_Integrat/Composite_Simphon_Rule';
+import Newton from './Iterpalation/Newton';
 import Nomatch from './Nomatch';
 import './index.css';
 
@@ -30,6 +31,7 @@ ReactDOM.render(
       <Route path="/Exact_Integrat/Composite_Trapezoda" component={Composite_Trapezoda}/>
       <Route path="/Exact_Integrat/Simphon" component={Simphon}/>
       <Route path="/Exact_Integrat/Composite_Simphon_Rule" component={Composite_Simphon_Rule}/>
+      <Route path="/Iterpalation/Newton" component={Newton}/>
 
 
       <Route component={Nomatch}/>

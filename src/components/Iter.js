@@ -3,7 +3,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Newton } from '../Interpalation/Newton';
+import { Newton } from '../Iterpalation/Newton';
 
 import { home } from '../home';
 const Styles = styled.div`
@@ -18,7 +18,7 @@ const Styles = styled.div`
   }
 `;
 
-export const Exact = () => (
+export const Iter = () => (
   <Styles>
     <Navbar expand="lg">
       <Navbar.Brand href="/">Home</Navbar.Brand>
