@@ -140,10 +140,7 @@ class Bisection extends Component{
         showTable: true,
         showBotton: true
     })
-
-
   }
-
   CreatedataTable(xl,xr,x,error){
     for(var i=0;i<xl.length;i++){
       dataTable.push({
