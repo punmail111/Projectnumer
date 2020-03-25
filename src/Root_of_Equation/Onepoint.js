@@ -37,7 +37,7 @@ const columns = [
 class Onepoint extends Component{
 
   data(){
-    axios.get('http://192.168.99.101:8080/onepoint').then(res => {
+    axios.get('http://192.168.99.100:8080/onepoint').then(res => {
       this.setState({
         fx: res.data[0].fx,
         x0: res.data[0].x0,

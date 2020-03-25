@@ -18,7 +18,7 @@ var A=[],B=[];
 class Newton extends Component{
 
   data(){
-    axios.get('http://192.168.99.101:8080/newton').then(res => {
+    axios.get('http://192.168.99.100:8080/newton').then(res => {
       this.setState({
         fx: res.data[0].fx,
         xl: res.data[0].xl,

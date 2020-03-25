@@ -44,7 +44,9 @@ const columns = [
 class Bisection extends Component{
 
   data(){
-    axios.get('http://192.168.99.101:8080/bisection').then(res => {
+
+
+    axios.get('http://192.168.99.100:8080/bisection').then(res => {
       this.setState({
         fx: res.data[0].fx,
         xl: res.data[0].xl,
@@ -173,7 +175,7 @@ class Bisection extends Component{
       <div className="Bisection">
         <Layout>
         <Root/>
-  
+
         <br />
         <br />
         <br />
