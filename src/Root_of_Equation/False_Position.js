@@ -76,7 +76,7 @@ class False_Position extends Component{
     this.False_Position(parseFloat(this.state.xl),parseFloat(this.state.xr));
     this.setState({
       showInput: false,
-      showBotton: true
+
     })
   }
 
@@ -125,7 +125,8 @@ class False_Position extends Component{
 
     this.CreatedataTable(data['xl'],data['xr'],data['x'],data['error']);
     this.setState({
-        showTable: true
+        showTable: true,
+        showBotton: true
     })
 
 

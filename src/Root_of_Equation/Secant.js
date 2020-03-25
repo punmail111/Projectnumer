@@ -78,7 +78,7 @@ class Secant extends Component{
       this.Secant(parseFloat(this.state.x0),parseFloat(this.state.x1));
       this.setState({
         showInput: false,
-        showBotton: true
+
       })
     }
 
@@ -106,7 +106,8 @@ class Secant extends Component{
       }while(e>0.000001 && i<20)
       this.CreatedataTable(data['x0'],data['x1'],data['x'],data['error']);
       this.setState({
-        showTable: true
+        showTable: true,
+        showBotton: true
       })
     }
 

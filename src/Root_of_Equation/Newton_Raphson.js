@@ -74,7 +74,7 @@ class Newton_Raphson extends Component{
       this.Newton_Raphson(parseFloat(this.state.x0));
       this.setState({
         showInput: false,
-        showBotton: true
+
       })
     }
 
@@ -99,7 +99,8 @@ class Newton_Raphson extends Component{
     }while(e>0.000001 && i<20)
     this.CreatedataTable(data['x0'],data['x1'],data['error']);
     this.setState({
-      showTable: true
+      showTable: true,
+      showBotton: true
     })
 
   }
