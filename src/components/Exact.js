@@ -7,14 +7,12 @@ import { Trapezoidial_Rule } from '../Exact_Integrat/Trapezoidial_Rule';
 import { Composite_Trapezoda } from '../Exact_Integrat/Composite_Trapezoda';
 import { Simphon } from '../Exact_Integrat/Simphon';
 import { Composite_Simphon_Rule } from '../Exact_Integrat/Composite_Simphon_Rule';
-
-import { home } from '../home';
 const Styles = styled.div`
   .navbar {
-    background-color: #222;
+    background-color: #6bccf9;
   }
   a, .navbar-brand, .navbar-nav .nav-link {
-    color: #bbb;
+    color: #222;
     &:hover {
       color: white;
     }

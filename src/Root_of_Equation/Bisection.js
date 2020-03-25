@@ -6,6 +6,7 @@ import { compile } from 'mathjs';
 import { Layout } from '../components/Layout';
 import { Table } from 'antd';
 import  axios  from 'axios';
+import { Jumbotron } from '../components/Jumbotron';
 
 
 
@@ -172,6 +173,7 @@ class Bisection extends Component{
       <div className="Bisection">
         <Layout>
         <Root/>
+  
         <br />
         <br />
         <br />

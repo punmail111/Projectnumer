@@ -12,10 +12,10 @@ import Secant from '../Root_of_Equation/Secant';
 import { home } from '../home';
 const Styles = styled.div`
   .navbar {
-    background-color: #222;
+    background-color: #6bccf9;
   }
   a, .navbar-brand, .navbar-nav .nav-link {
-    color: #bbb;
+    color: #222;
     &:hover {
       color: white;
     }

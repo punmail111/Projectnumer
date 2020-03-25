@@ -13,6 +13,7 @@ export const home = () => (
   <div>
     <NavigationBar/>
     <Jumbotron/>
+    
   </div>
 
 )

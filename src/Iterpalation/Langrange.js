@@ -159,7 +159,7 @@ class Langrange extends Component{
       <div className="Langrange">
         <Layout>
         <Iter/>
-        <br />
+
 
 
         <br />
@@ -170,21 +170,21 @@ class Langrange extends Component{
           <Col sm='20' md={{ size: 6, offset: 3 }}>
 
 
-          <br />
+
 
           {this.state.showInputn &&
+            <InputGroup>
+              <InputGroupAddon addonType='prepend'>
+              <InputGroupText>N</InputGroupText>
+              </InputGroupAddon>
 
-          <InputGroup>
-            <InputGroupAddon addonType='prepend'>
-            </InputGroupAddon>
-
-          <br />
-          <Input type='text' class="form-control" name='n' placeholder='Only 2-3' onChange={this.handleChange} />
-          <Input type='text' class="form-control" name='x' placeholder='2.20' onChange={this.handleChange} />
-          <InputGroupText >X</InputGroupText>
-          </InputGroup>}
-          <br />
-          <br />
+            <Input type='text' class="form-control" name='n' placeholder='Only 2-3' onChange={this.handleChange} />
+            <br />
+            <Input type='text' class="form-control" name='x' placeholder='2.20' onChange={this.handleChange} />
+            <InputGroupText >X</InputGroupText>
+            </InputGroup>}
+            <br />
+            <br />
           {this.state.showInputn &&
           <Button  size="lg" onClick={() => this.createNx(this.state.n)}>Submit</Button>
           }
