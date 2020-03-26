@@ -1,14 +1,19 @@
 "# NumerProjectwithDocker"
 
 เวลา pull project นะครับ ดึงได้เลยไม่ต้องโหลด
+
 docker pull punmail111/project-numer:app
+
 api นะครับ
+
 docker pull punmail111/project-numer:api
+
 อันนี้ pull มาก่อน
+
 docker pull mongo
 
 เพื่อเปิดโปรเจคใช้คำสั่ง
-          set port
+         
 docker run -p 80:3000 -d punmail111/project-numer:api
 
 docker run -p 8080:8080 -d punmail111/project-numer:api
