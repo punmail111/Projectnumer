@@ -14,7 +14,7 @@ docker pull mongo
 
 เพื่อเปิดโปรเจคใช้คำสั่ง
          
-docker run -p 80:3000 -d punmail111/project-numer:api
+docker run -p 80:3000 -d punmail111/project-numer:app
 
 docker run -p 8080:8080 -d punmail111/project-numer:api
 
